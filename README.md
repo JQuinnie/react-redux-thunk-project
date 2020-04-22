@@ -26,3 +26,10 @@ A middleware is a plain javascript function that is going to be called with ever
 - Redux Thunk helps deal with asynchronous action creators
 - With Redux Thunk, action creators can return action objects as well as functions
 - If a function is returned, Redux Thunk will invoke or call the function automatically
+
+### Rules of Reducers
+
+1. Must return any value besides 'undefined'
+2. Produces 'state', or data to be used inside of your app using only previous state and the action (reducers are pure)
+3. Must not return reach 'out of itself' to decide what values to return
+4. Must not mutate its input 'state' argument (Redux will not update or render if the same state, although mutated comes back)
